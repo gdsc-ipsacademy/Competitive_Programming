@@ -6,7 +6,7 @@ Welcome to the Competitive Programming repository for the GDSC (Google Developer
 
 1. [Algorithms](#algorithms)
 2. [Data Structures](#data-structures)
-3. [Competitive Programming Templates](#competitive-programming-templates)
+3. [Templates for CP](#competitive-programming-templates)
 4. [Other Directories](#other-directories)
 5. [How to Contribute](#how-to-contribute)
 6. [Community Guidelines](#community-guidelines)
@@ -21,7 +21,7 @@ The "Data Structures" directory provides implementations of fundamental data str
 
 ## Competitive Programming Templates
 
-The "CP Templates" directory houses templates for common competitive programming tasks. These templates can be handy during coding competitions, saving you time on writing boilerplate code.
+The "cp templates" directory houses templates for common competitive programming tasks. These templates can be handy during coding competitions, saving you time on writing boilerplate code.
 
 ## Other Directories
 
