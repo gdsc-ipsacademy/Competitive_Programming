@@ -1,4 +1,4 @@
-# Binary Search
+# Insertion sort
 
 Insertion sort is a simple and efficient comparison-based sorting algorithm that builds the sorted portion of an array one item at a time. It iterates through the array and "inserts" each unsorted element into its correct position in the sorted portion. The algorithm is stable, meaning it preserves the relative order of equal elements.
 
