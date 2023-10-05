@@ -2,7 +2,7 @@
 using namespace std;
 
 void insertion_sort(int arr[], int n) {
-    for (int i = 0; i <= n - 1; i++) {
+    for (int i = 1; i < n; i++) {
         int j = i;
         while (j > 0 && arr[j - 1] > arr[j]) {
             int temp = arr[j - 1];
@@ -11,12 +11,6 @@ void insertion_sort(int arr[], int n) {
             j--;
         }
     }
-
-    cout << "After Using insertion sort: " << "\n";
-    for (int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
-    }
-    cout << "\n";
 }
 
 int main()
@@ -31,5 +25,11 @@ int main()
     cout << endl;
 
     insertion_sort(arr, n);
+
+    cout << "After Using insertion sort: " << "\n";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << "\n";
     return 0;
 }
