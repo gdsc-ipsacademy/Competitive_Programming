@@ -31,3 +31,4 @@ The quick sort algorithm can be described with the following steps:
 ## Articles
 - https://www.javatpoint.com/quick-sort
 - https://www.programiz.com/dsa/quick-sort
+- https://en.wikipedia.org/wiki/Quicksort
