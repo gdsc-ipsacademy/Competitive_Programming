@@ -12,9 +12,7 @@ The basic operations that can be performed on a stack are as follows:
 - **isEmpty**: Checking if the stack is empty.
 - **isFull**: Checking if the stack is full (for fixed-size stacks).
 
-## Code Explanation
-
-The code in this repository provides a generic stack implementation using C++ templates. It demonstrates the fundamental operations of a stack, including pushing elements onto the stack, popping elements from the stack, and checking for stack properties such as emptiness and fullness.
+  
 
 ## Time and Space Complexity
 
