@@ -1,5 +1,3 @@
-// Implement Radix Sort in C++ with snippets explaining the logic behind the algorithm.
-
 #include <iostream>
 using namespace std;
 
@@ -64,5 +62,3 @@ int main()
 
     return 0;
 }
-
-// OUTPUT : 1 2 3 4 5
