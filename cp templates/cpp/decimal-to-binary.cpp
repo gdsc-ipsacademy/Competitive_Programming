@@ -1,4 +1,4 @@
-// postive decimal to binary
+// positive decimal to binary
 int decimalToBinary(int decimal)
 {
     int binary = 0, base = 1;
