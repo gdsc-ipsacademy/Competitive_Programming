@@ -1,4 +1,4 @@
-name: Check C++ Compilation
+name: Compile C and C++ Files
 
 on:
   pull_request:
@@ -13,12 +13,15 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Check for C++ compilation errors
+    - name: Install g++ libraries
       run: |
-        for file in $(find $GITHUB_WORKSPACE -type f -name "*.cpp"); do
-          g++ -o "${file%.cpp}.out" "$file" 2>&1
-          if [ $? -ne 0 ]; then
-            echo "C++ compilation failed in $file"
-            exit 1
-          fi
-        done
+        sudo dpkg --add-architecture i386
+        sudo apt-get update
+        sudo apt-get install -y g++-9 g++-9-multilib
+        echo "::set-env name=CC::gcc-9"
+        echo "::set-env name=CXX::g++-9"
+
+    - name: Compile C and C++ files
+      run: |
+        find . -type f -name "*.c" -exec gcc {} \;
+        find . -type f -name "*.cpp" -exec g++ {} \;
