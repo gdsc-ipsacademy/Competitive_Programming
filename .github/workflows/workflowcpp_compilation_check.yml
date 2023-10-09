@@ -21,11 +21,17 @@ jobs:
 
     - name: Check for C++ compilation errors
       run: |
+        failed_compilations=""
         for file in $(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '\.cpp$'); do
           echo "Compiling $file"
-          g++ -o "${file%.cpp}.out" "$file"
+          g++ -o "${file%.cpp}.out" "$file" 2>&1
           if [ $? -ne 0 ]; then
             echo "C++ compilation failed in $file"
-            exit 1
+            failed_compilations="${failed_compilations}${file}\n"
           fi
         done
+        if [ -n "$failed_compilations" ]; then
+          echo "The following C++ files failed compilation:"
+          echo -e "$failed_compilations"
+          exit 1
+        fi
