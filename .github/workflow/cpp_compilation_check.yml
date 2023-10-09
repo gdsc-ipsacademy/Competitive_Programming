@@ -1,0 +1,26 @@
+name: Check C++ Compilation
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Check for C++ compilation errors
+      run: |
+        for file in $(git diff --name-only ${{ github.event.before }} ${{ github.sha }}); do
+          if [[ $file == *.cpp ]]; then
+            g++ -o "${file%.cpp}.out" "$file"
+            if [ $? -ne 0 ]; then
+              echo "C++ compilation failed in $file"
+              exit 1
+            fi
+          fi
+        done
