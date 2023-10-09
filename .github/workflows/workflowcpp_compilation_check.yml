@@ -1,4 +1,4 @@
-name: Compile C and C++ Files
+name: Check C++ Compilation in Pull Request
 
 on:
   pull_request:
@@ -13,15 +13,19 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install g++ libraries
-      run: |
-        sudo dpkg --add-architecture i386
-        sudo apt-get update
-        sudo apt-get install -y g++-9 g++-9-multilib
-        echo "::set-env name=CC::gcc-9"
-        echo "::set-env name=CXX::g++-9"
+    - name: Install g++
+      run: sudo apt-get install g++ -y
 
-    - name: Compile C and C++ files
+    - name: List files in the working directory
+      run: ls -la
+
+    - name: Check for C++ compilation errors
       run: |
-        find . -type f -name "*.c" -exec gcc {} \;
-        find . -type f -name "*.cpp" -exec g++ {} \;
+        for file in $(find . -type f -name "*.cpp"); do
+          echo "Compiling $file"
+          g++ -o "${file%.cpp}.out" "$file"
+          if [ $? -ne 0 ]; then
+            echo "C++ compilation failed in $file"
+            exit 1
+          fi
+        done
