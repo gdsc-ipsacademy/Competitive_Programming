@@ -6,12 +6,9 @@ Bubble sort is a simple sorting algorithm that repeatedly steps through the list
 
 ## Table of Contents
 - [Algorithm](#algorithm)
-- [Time Complexity](#time-complexity)
-- [Space Complexity](#space-complexity)
 - [Usage](#usage)
-- [Example](#example)
 - [Problems](#problems)
-- [Additional Resources](#additional-resources)
+- [Resources](#additional-resources)
 
 ## Algorithm
 
@@ -31,4 +28,12 @@ You can use the `bubbleSort` function provided in the code to sort arrays of dif
 std::vector<int> intArray = {64, 25, 12, 22, 11};
 bubbleSort(intArray);
 ```
+# Problems
+1. https://www.codingninjas.com/studio/problems/bubble-sort_980524
+2. https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/practice-problems/
+
+## Articles
+ - https://www.geeksforgeeks.org/bubble-sort/
+ - https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/tutorial/
+
 
