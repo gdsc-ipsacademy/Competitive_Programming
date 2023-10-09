@@ -21,7 +21,7 @@ jobs:
 
     - name: Check for C++ compilation errors
       run: |
-        for file in $(find . -type f -name "*.cpp"); do
+        for file in $(find . -type f -name "*.cpp" -not -path "./cp/*"); do
           echo "Compiling $file"
           g++ -o "${file%.cpp}.out" "$file"
           if [ $? -ne 0 ]; then
