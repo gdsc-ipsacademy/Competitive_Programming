@@ -15,7 +15,7 @@ jobs:
 
     - name: Check for C++ compilation errors
       run: |
-        for file in $(find . -type f -name "*.cpp"); do
+        for file in $(find $GITHUB_WORKSPACE -type f -name "*.cpp"); do
           g++ -o "${file%.cpp}.out" "$file" 2>&1
           if [ $? -ne 0 ]; then
             echo "C++ compilation failed in $file"
