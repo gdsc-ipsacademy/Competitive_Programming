@@ -46,7 +46,7 @@ int main() {
     string t = "one piece";
     string s = "pie";
 
-    Solution sol = new Solution();
+    Solution *sol = new Solution();
     cout<<"'"s<<"' is substring of '"<<t<<"': "<<(sol.isSubsequence(s, t))<<endl;
     return 0;
 }
