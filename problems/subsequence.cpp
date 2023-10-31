@@ -47,6 +47,6 @@ int main() {
     string s = "pie";
 
     Solution *sol = new Solution();
-    cout<<"'"s<<"' is substring of '"<<t<<"': "<<(sol.isSubsequence(s, t))<<endl;
+    cout<<"'"s<<"' is substring of '"<<t<<"': "<<(sol->isSubsequence(s, t))<<endl;
     return 0;
 }
