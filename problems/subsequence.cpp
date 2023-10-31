@@ -7,6 +7,9 @@ Intuition:
 - If we successfully find all characters in 's' in 't', we return true; otherwise, we return false.
 */
 
+#include<bits/stdc++.h>
+using namespace std;
+
 class Solution
 {
 public:
