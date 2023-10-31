@@ -41,3 +41,12 @@ public:
         return true; // If we successfully found all characters in 's' in 't'.
     }
 };
+
+int main() {
+    string t = "one piece";
+    string s = "pie";
+
+    Solution sol = new Solution();
+    cout<<"'"s<<"' is substring of '"<<t<<"': "<<(sol.isSubsequence(s, t))<<endl;
+    return 0;
+}
