@@ -1,9 +1,3 @@
-
-#include <bits/stdc++.h>
- 
-using namespace std;
- 
-#define ar array
 #define ll long long
  
 const int MAX_N = 1e5 + 5;
@@ -29,20 +23,4 @@ int cnt_occ(string s, string t) {
     int res = 0;
     for (int i = n + 1; i < nm; i++) res += (f[i] == n);
     return res;
-}
- 
-void solve() {
-    string s, t; cin >> s >> t;
-    cout << cnt_occ(s, t) << "\n";
-}
- 
-int main() {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0); cout.tie(0);
-    int tc = 1;
-    // cin >> tc;
-    for (int t = 1; t <= tc; t++) {
-        // cout << "Case #" << t << ": ";
-        solve();
-    }
 }
