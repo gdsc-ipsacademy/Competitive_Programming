@@ -3,30 +3,6 @@
 
 using namespace std;
 
-// bool checkCircular(Node * head)
-// {
-// unordered_map<node*, bool>vis;
-
-// Node*temp=head;
- 
-
-//  while(temp !=NULL)
-//  {
-//     if(is.find(temp) != vis.end())
-//     {
-//         vis[temp]=true;
-//     }
-//     else
-//     {
-//         return true;
-//     }
-//     temp=temp->next;
-//  }
-//  return false;
-
-//     }
-
-
 int main()
 {
     string str = "thiruvananthapuram";
