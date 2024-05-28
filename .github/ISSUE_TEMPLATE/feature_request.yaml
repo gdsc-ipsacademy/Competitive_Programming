@@ -1,0 +1,36 @@
+name: ⭐ Feature Request
+description: Submit a feature request
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting a feature request!
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue related to this feature request already exists
+      options:
+      - label: I have searched the existing issues
+        required: true
+  - type: textarea
+    id: the-feature-request
+    attributes:
+      label: The feature request
+      description:
+        Write a clear and concise description of what the feature or problem is.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed solution
+      description: Describe the solution you'd like. A clear and concise description of what you want to happen.
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description:
+        Please include any other context, like screenshots or mockups, if
+        applicable.
