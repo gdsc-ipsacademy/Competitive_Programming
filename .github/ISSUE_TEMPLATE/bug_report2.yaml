@@ -34,5 +34,4 @@ body:
   - type: markdown
     id: logs
     attributes:
-      value: 
-      description: Please paste any relevant log output or screenshots.
+      value: Please paste any relevant log output or screenshots.
