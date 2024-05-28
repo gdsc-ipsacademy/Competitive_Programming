@@ -31,9 +31,8 @@ body:
       value: NA
     validations:
       required: false
-  - type: textarea
+  - type: markdown
     id: logs
     attributes:
       label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+      description: Please paste any relevant log output or screenshots.
