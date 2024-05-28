@@ -28,7 +28,7 @@ body:
     attributes:
       label: Version
       description: What version of our software are you running?
-      default: Not Required
+      value: NA
     validations:
       required: false
   - type: textarea
